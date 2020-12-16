@@ -93,6 +93,8 @@ color:#fff;
 text-align: center;
 line-height: 44px;
 padding: 0 28px;
+margin-top: 40px;
+width: auto;
 }
 .tab-container .tabs.hide{
 	display: none;
