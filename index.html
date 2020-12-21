@@ -5,22 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	 <title>Design Pattern</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="css/animate.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">  
 </head>
 <body>
 	<div class="container">
-		<header class="header">
+		<header>
 			<div class="wrapper">
 			<div class="left">
 				<a href="#"><img src="images/dp-logo.svg"></a>
 			</div>
 			<div class="right">
 				<ul>
-					<li class="active"><a href="#">About us</a></li>
-					<li><a href="#">Events</a></li>
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="events.html">Events</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
+				<div class="hamburger"><span></span><span></span><span></span></div>
 			</div>
 			</div>
 		</header>
@@ -28,16 +30,16 @@
 		<section class="banner_section">
 			<div class="wrapper">
 			<div class="left">
-				<h1>Design patrons Be the change!</h1>
-				<p>Design patrons is a design community working towards evangelizing design education and promoting mentoring culture.</p>
-				<a href="#" class="btn">
-					<img src="images/dp-btn-logo.png">
+				<h1 class="to-animate" data-delay="100" data-animate="fadeInUp animated">Design patrons Be the change!</h1>
+				<p class="to-animate" data-delay="200" data-animate="fadeInUp animated">Design patrons is a design community working towards evangelizing design education and promoting mentoring culture.</p>
+				<a href="https://dpatrons.slack.com/join/shared_invite/zt-keqtq46p-5PKt7HCrRTtIpJOOO2uI~g#/" target="_blank" class="btn to-animate" data-delay="300" data-animate="fadeInUp animated">
+					<img src="images/dp-btn-logo.svg">
 					<span>Join Slack Channel</span>
 				</a>
-				<div class="sub_ctn">Recieve our updates in a Slack <span>#channel</span> or direct message using the above button.</div>
+				<div class="sub_ctn to-animate" data-delay="100" data-animate="fadeInUp animated">Recieve our updates in a Slack <span>#channel</span> or direct message using the above button.</div>
 			</div>
-			<div class="right">
-				<img src="images/dp-banner.jpg">
+			<div class="right to-animate" data-delay="400" data-animate="fadeInUp animated">
+				<img src="images/dp-banner.svg">
 			</div>
 			</div>
 		</section>
@@ -46,11 +48,11 @@
 		<section class="what_do_we_do">
 			<div class="wrapper">
 				<div class="left">
-					<h2>What do we do?</h2>
-					<p>We identify self-motivated young minds who cannot afford fancy whiteboard institutes for education. We connect them to the committed industrial experts (mentors). These mentors will take care of their assigned mentees through out their journey until they get a good career opportunity.</p>
+					<h2 class="to-animate" data-delay="100" data-animate="fadeInUp animated">What do we do?</h2>
+					<p class="to-animate" data-delay="200" data-animate="fadeInUp animated">We identify self-motivated young minds who cannot afford fancy whiteboard institutes for education. We connect them to the committed industrial experts (mentors). These mentors will take care of their assigned mentees through out their journey until they get a good career opportunity.</p>
 				</div>
 				<div class="right">
-					<img src="images/dp-what-do-we-do.png">
+					<img src="images/dp-what-do-we-do.png" alt="" class="to-animate" data-delay="300" data-animate="fadeInUp animated">
 				</div>
 			</div>
 		</section>
@@ -58,9 +60,9 @@
 		<section class="what_you_will_get">
 			<div class="wrapper">
 				<div class="left">
-					<img src="images/dp-what-you-will-get.png">
+					<img src="images/dp-what-you-will-get.svg" alt="" class="to-animate" data-delay="100" data-animate="fadeInUp animated">
 				</div>
-				<div class="right">
+				<div class="right to-animate" data-delay="200" data-animate="fadeInUp animated">
 					<h2>What you will get?</h2>
 					<ul>
 						<li>Self-satisfaction on changing lives.</li>
@@ -77,28 +79,30 @@
 
 		<section class="together_we_can">
 			<div class="wrapper">
-				<div class="together">
+				<div class="together to-animate" data-delay="100" data-animate="fadeInUp animated">
 					<h2>Together we can do more!</h2>
 					<p>Who can join this community?</p>
 					<a href="#" class="btn">
 					<span>View More</span>
-				</a>
+				    </a>
 				</div>
-				<div class="mentor">
-					<img src="images/mentor.png">
+				<div class="left-mentors">
+					<div class="mentor to-animate" data-delay="200" data-animate="fadeInUp animated">
+					<img src="images/mentor.svg">
 					<h3>Mentors</h3>
 					<p class="sec_p">If you are an industrial expert having more than 4+ years of experience in your domain, You can sign up as a mentor!</p>
 					<a href="#" class="btn txt-btn">
 					<span>Learn More</span>
 				</a>
 				</div>
-				<div class="mentee">
-					<img src="images/mentee.png">
+				<div class="mentee to-animate" data-delay="300" data-animate="fadeInUp animated">
+					<img src="images/mentee.svg">
 					<h3>Mentee</h3>
 					<p class="sec_p">If you are someone who is passionately looking for an opportunity to learn things from the experts, You can register as a mentee.</p>
 					<a href="#" class="btn txt-btn">
 					<span>Learn More</span>
-				</a>
+				   </a>
+				</div>
 				</div>
 			</div>
 		</section>
@@ -106,7 +110,7 @@
 
 		<section class="volunteer autoplay">
 			<div class="wrapper">
-				<h4>Be a Volunteer</h4>
+				<h4 class="to-animate" data-delay="100" data-animate="fadeInUp animated">Be a Volunteer</h4>
 				<p>As a volunteer you can help us in our community works
 (it includes, writing, designing, art any skills)
 You can help us identify the right mentee/mentor. And to connect them
@@ -122,14 +126,14 @@ Social media, Design, PR, content writing, etc.,
 		<section class="testimonial">
 			<div class="wrapper">
 				<div class="left">
-					<img class="quote_small" src="images/double-quotes-small.png">
-								<p>We’re here for a reason. I believe a bit of the reason is to 
+					<img class="quote_small" src="images/double-quotes-small.svg" alt="">
+			    <p>We’re here for a reason. I believe a bit of the reason is to 
 				throw little torches out to lead people through the dark.</p>
 				<span class="dis-block"> —  Whoopi Goldberg</span>
 				</div>
 				<div class="right">
 					<img src="images/whoopi_goldberg.png">
-					<img class="quote_big" src="images/double-quotes-big.png">
+					<img class="quote_big" src="images/double-quotes-big.svg" alt="">
 				</div>
 			</div>
 		</section>
@@ -146,11 +150,11 @@ Social media, Design, PR, content writing, etc.,
 					<span>Contact Us</span>
 				</a>
 				<div class="cnt_num">
-					<img src="images/dp-call.png">
+					<img src="images/dp-call.svg">
 					<span>91 987654321</span>
 				</div>
 				<div class="cnt_add">
-					<img src="images/dp-mail.png">
+					<img src="images/dp-mail.svg">
 					<span>disturb@dpatrons.com</span>
 				</div>
 			</div>
@@ -160,22 +164,22 @@ Social media, Design, PR, content writing, etc.,
 			<div class="wrapper">
 			<div class="innr_wrap">
 				<div>
-					<a href="#"><img src="images/footer_dp_logo.svg"></a>
+					<a href="#"><img src="images/footer_dp_logo.svg" alt=""></a>
 				</div>
 				<div class="footer_nav">
 					<ul>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Events</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="events.html">Events</a></li>
 						<li><a href="#">Blog</a></li>
 						<li><a href="#">Contact</a></li>
 					</ul>
 				</div>
 				<div class="social_app">
 					<ul>
-						<li class="fb"><a href="#"><img src="images/dp-fb.png"></a></li>
-						<li><a href="#"><img src="images/dp-insta.png"></a></li>
-						<li><a href="#"><img src="images/dp-li-in.png"></a></li>
-						<li><a href="#"><img src="images/dp-twit.png"></a></li>
+						<li class="fb"><a href="#"><img src="images/dp-fb.svg" alt="facebook"></a></li>
+						<li><a href="https://www.instagram.com/designpatrons/" target="_blank"><img src="images/dp-insta.svg" alt="instagram"></a></li>
+						<li><a href="https://www.linkedin.com/in/design-patrons-b889601b8/" target="_blank"><img src="images/dp-li-in.svg" alt="linkedin"></a></li>
+						<li><a href="https://twitter.com/designpatrons" target="_blank"><img src="images/dp-twit.svg" alt="twitter"></a></li>
 					</ul>
 				</div>
 			</div>
@@ -193,3 +197,50 @@ Social media, Design, PR, content writing, etc.,
 <script src="js/jquery.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
+<script>
+	 $(document).ready(function(){
+        var visible;
+        var sectionAnimation = function() {
+            $('.to-animate').each(function(index, element) {
+                var $this = $(this),
+                    dataAnimate = $(this).data('animate'),
+                    $delay = $(this).data('delay');
+                visible = isInViewport(this);
+                if (visible) {
+                    setTimeout(function() {
+                        $this.addClass(dataAnimate);
+                    }, $delay);
+                }
+            });
+        };
+        sectionAnimation();
+
+        var headerFix = function(){
+        	if($(window).scrollTop() > $('.what_do_we_do').offset().top - 200){
+        			$('header').addClass('active');
+        	}
+        	else{
+        			$('header').removeClass('active');
+        	}
+        }
+       $(document).on('click','.hamburger',function(){
+       	$(this).toggleClass('open');
+       	$('header .right ul').toggleClass('open');
+       	$('body').toggleClass('overhide');
+       });
+        $(window).scroll(function(){
+        	sectionAnimation();
+        	headerFix();
+        });
+    });
+
+	 function isInViewport(node) {
+        var rect = node.getBoundingClientRect();
+        return (
+             rect.bottom >= 0 &&
+            rect.right >= 0 &&
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+        )
+    }
+</script>

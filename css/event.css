@@ -5,6 +5,7 @@ h1{
 }
 .banner-section{
 	text-align: center;
+	margin-top: 80px;
 }
 .banner-section p{
 	width: 90%;
@@ -69,8 +70,8 @@ margin-top: 50px;
 }
 .list-container ul li:before{
 	content: '';
-	width: 12px;
-	height: 12px;
+	width: 10px;
+	height: 10px;
 	position: absolute;
 	left:0px;
 	background-color: #EA7068;
@@ -113,5 +114,5 @@ position: absolute;
 bottom: 0px;
 left: 0;
 transition: left 0.4s ease;
-z-index: 2;
+z-index: 1;
 }
