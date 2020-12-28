@@ -109,13 +109,17 @@ margin: 0 auto;
 .speakers-list{
 	margin-top: 50px;
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 .speakers-list .col_4{
 	flex-basis: 25%;
 	background-color: #272D36;
+	width: 25%;
+}
+.speaker-img img{
+	width: 100%;
 }
 .speakers-list .col_4:nth-child(even){
 	background-color: #22252B;
@@ -153,4 +157,66 @@ margin-top: 5px;
 .pricing{
 	text-align: center;
 padding: 100px 0;
+}
+@media all and (max-width: 768px){
+	.cols{
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 40px;
+	}
+	.col_3{
+		flex-basis: 80%;
+		margin-top: 90px;
+	}
+	.speakers-list .col_4{
+		flex-basis: 50%;
+	}
+}
+@media all and (max-width: 620px){
+	.conference-bg{
+		width: 70%;
+		margin: 0 auto;
+		padding-bottom: 200px;
+	}
+	.cont-wrap{
+		max-width: 90%;
+	}
+	.cont-wrap h4{
+		font-size: 40px;
+	}
+	.cont-wrap p {
+        width: 95%;
+	}
+	.reason_dcon h5 {
+    font-size: 38px;
+    line-height: 1.2;
+	}
+	h2{
+		font-size: 28px;
+	}
+	p{
+		font-size: 16px;
+	}
+	.banner-bg{
+		height: auto;
+	}
+}
+@media all and (max-width: 480px){
+	.speakers-list .col_4 {
+    flex-basis: 100%;
+	}
+	.speakers p{
+		width: 85%;
+	}
+	.cont-wrap h4 {
+    font-size: 34px;
+	}
+	.counter{
+		width: 62px;
+height: 62px;
+font-size: 30px;
+	}
+	.col_3 {
+    flex-basis: 85%;
+	}
 }
