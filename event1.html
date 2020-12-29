@@ -30,22 +30,31 @@
 		</header>
 
 		<section class="banner-bg">
+			<div class="timer">
+				  <h2>23rd & 24th, January 2021</h2>
+				  	 <div class="timer-count">
+				  	 	<div class="counting"><span class="days num">00</span><span class="label-txt">Days</span></div><div class="counting"><span class="hrs num">00</span><span class="label-txt">Hours</span></div><div class="counting"><span class="min num">00</span><span class="label-txt">Minutes</span></div><div class="counting"><span class="sec num">00</span><span class="label-txt">Seconds</span></div></div>
+				  </div>
 			<div class="wrapper">
 				  <div class="conference-bg">
 				  	  <img src="images/conference-img.svg" alt=""/>
 				  </div>
+				  
 			</div>
 		</section>
 
 		<section class="design_conf">
 			 <div class="wrapper">
 			 	 <div class="cont-wrap">
-			 	 		<h4>D’Con is the first of its kind new age virtual design conference!</h4>
-			 	 		<p>Interact with experts, network with like minded folks, round table discussions, music, food and goodies in a virtual conference. Yes, you read it right!</p>
-			 	 		<a href="#" class="btn"><span>Buy Ticket</span></a>
-			 	 		<span class="decorateline">Limited seats only! Grab yours now</span>
+			 	 	    <img src="images/virutualconference.svg" alt=""> 
+			 	 		<h4>It’s not just a virtual conference</h4>
+			 	 		<p>You'll get access to interact with the speakers. Participate in the live Q/A sessions/panel discussion, etc. You'll get a privilege to networking session during the conference. A one-on-one session where you could meet like-minded mortals and industry experts to connect. And we surprise you with our exclusive goodies at your physical address.</p>
+			 	 		<a href="#" class="btn"><span>Book Now</span></a>
+			 	 		<span class="decorateline">Limited seats only! Grab yours For <strong>₹299</strong></span>
 			 	 </div>
+			 	</div> 
 			 	 <div class="reason_dcon">
+			 	 	<div class="wrapper">
 						 	 	  <h5>Reasons to attend 
 					D’Con 2021</h5>
 					<div class="cols">
@@ -65,13 +74,14 @@
 					    	  <p>Design is not just colors and shapes! We curated the event in such a way to provide you with a best in class learning experience from industry experts of different domains. From the basics of design thinking.</p>
 					    </div>
 					</div>
+				  </div>
 			 	 </div>
 			 	 <div class="cont-wrap whoattend">
+			 	 	 <div class="wrapper">
 			 	 		<h4>Who can attend the conference?</h4>
 			 	 		<p>Aspiring designers Entry level/mid level designers who wants to sharpen their saw. And keep updated with the future trends Industry experts who wants to give back to the community just by getting involved in the community and sharing their wisdom.</p>
 			 	 		<img src="images/designpatron-attend.svg" alt=""/>
-			 	 		
-			 	 </div>
+			 		 </div>
 			 </div>
 		</section>
 
@@ -309,31 +319,20 @@
 				 	 </div>	 
 				 </div>
 				 <div class="col_4">
-				 	 <div class="speaker-img"><img src="images/speaker1.jpg" alt=""></div>
-				 	 <div class="speakers-details">
-				 	 	 <span class="speaker-name">Nashwa Naushad</span>
-				 	 	 <span class="speaker-description">Chevening Scholar 2019-20 | Program Officer at Ashden</span>
-					 	 	 <div class="social_app">
-						       <ul>
-							<li class="fb"><a href="https://www.facebook.com/designpatrons/"><img src="images/dp-fb-white.svg" alt="facebook"></a></li>
-							
-							<li><a href="https://www.linkedin.com/in/design-patrons-b889601b8/" target="_blank"><img src="images/dp-li-in-white.svg" alt="linkedin"></a></li>
-							<li><a href="https://twitter.com/designpatrons" target="_blank"><img src="images/dp-twit-white.svg" alt="twitter"></a></li>
-						      </ul>
-					       </div>
-				 	 </div>	 
+				 	 
 				 </div>
 			</div>
 		</section>
 
 		<section class="pricing">
 			<div class="wrapper">
-				  <h4>Tickets</h4>
-				  <div class="cols">
-				  	 <div class="cols3">
-
-				  	 </div>
-				  </div>
+				   <div class="cont-wrap">
+			 	 	    
+			 	 		<h4>Just to provide you a better interactive experience we have limited our seats</h4>
+			 	 		
+			 	 		<a href="#" class="btn"><span>Book Now</span></a>
+			 	 		<span class="decorateline">Limited seats only! Grab yours For <strong>₹299</strong></span>
+			 	 </div>
 			</div>
 		</section>
 		<footer>
@@ -375,6 +374,7 @@
 <script src="js/main.js"></script>
 <script>
 	 $(document).ready(function(){
+
         var visible;
         var sectionAnimation = function() {
             $('.to-animate').each(function(index, element) {
@@ -408,6 +408,39 @@
         	sectionAnimation();
         	headerFix();
         });
+
+        function add_time(num) {
+    return ( num < 10 ? "0" : "" ) + num;
+  }
+  
+setInterval(function() {
+  var date1 = new Date(); 
+  var date2 = new Date( "jan 24 2021 13:00:00" );
+  var res = Math.abs(date1 - date2) / 1000; 
+  var days = Math.floor(res / 86400);
+  var hours = Math.floor(res / 3600) % 24;
+  var minutes = Math.floor(res / 60) % 60;
+
+   var seconds = res % 60;
+   days = add_time(days); 
+  hours = add_time(hours);
+  minutes = add_time(minutes);
+seconds = add_time(parseInt(seconds));
+if(date1 > date2){
+  $(".days").text("00");
+  $(".hrs").text("00");
+  $(".min").text("00");
+  $(".sec").text("00");
+}
+else{
+  $(".days").text(days);
+  $(".hrs").text(hours);
+  $(".min").text(minutes);
+  $(".sec").text(seconds);
+ }
+}, 1000);
+ 
+
     });
 
 	 function isInViewport(node) {
