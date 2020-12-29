@@ -11,7 +11,7 @@
 	color:var(--secondary-color);
 }
 .banner-bg{
-	background: url(../images/conference-bg.svg) no-repeat;
+	background: url(../images/conference-bg.jpg) no-repeat;
 	text-align: center;
 	height: 100vh;
 	background-size: cover;
@@ -116,7 +116,6 @@ text-align: center;
 }
 .reason_dcon h5{
 	font-size: 40px;
-font-weight: 400;
 width: 380px;
 letter-spacing: -1px;
 margin: 0 auto;
@@ -166,7 +165,6 @@ text-align: left;
 }
 .whoattend h4{
 	font-size: 40px;
-	font-weight: 400;
 }
 .whoattend p{
 	width: 85%;
