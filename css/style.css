@@ -159,6 +159,7 @@ header{
 	box-shadow: 0 0 15px rgba(0,0,0,0);
 	transition: all 0.5s ease;
 	top: 0;
+	padding: 0 30px;
 }
 header.active{
 	border-color: #f8f8f8;
@@ -610,7 +611,7 @@ footer{
 	header .right ul {
     background: #fff;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     padding: 10px;
     left: 0;
     height: 0;
