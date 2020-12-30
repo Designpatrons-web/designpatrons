@@ -10,6 +10,9 @@
 .eventssect header.active .right ul li,.eventssect header .right ul.open li{
 	color:var(--secondary-color);
 }
+.eventssect header .right ul li.active{
+	font-weight: 600;
+}
 .eventssect header .hamburger span{
 	background-color: #fff;
 }
@@ -68,7 +71,7 @@ font-weight: 500;
     padding: 5px 0;
 }
 .design_conf{
-	padding: 90px 0;
+	padding: 90px 0 120px;
 	position: relative;
 	overflow: hidden;
 }
@@ -90,6 +93,14 @@ transform: rotate(90deg);
 left: -280px;
 right: auto;
 top: 20%;
+}
+.design_conf:after{
+	background:url(../images/patternsleft.svg) no-repeat;
+	left: 0;
+height: 700px;
+width: 200px;
+background-size: 100%;
+top: 10%;
 }
 .whoattend:before{
 	background:url(../images/circlepattern.svg) no-repeat;
@@ -116,11 +127,11 @@ font-size: 13px;
 line-height: 1.2;
 }
 .cont-wrap p{
-width: 90%;
-margin: 0 auto;
+width: 72%;
+margin: 0 auto 20px;
 }
 .reason_dcon{
-	padding: 100px 0;
+padding: 150px 0 200px;
 text-align: center;
 }
 .reason_dcon h5{
@@ -176,7 +187,7 @@ text-align: left;
 	font-size: 40px;
 }
 .whoattend p{
-	width: 85%;
+	width: 72%;
 }
 .speakers{
 	background-color: #03091C;

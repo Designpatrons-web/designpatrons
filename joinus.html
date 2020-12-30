@@ -3,8 +3,9 @@
 <head>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	 <title>Design Patrons</title>
+	 <title>Design Patrons | Joinus</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	 <link rel="icon" type="image/x-icon" href="images/favicon.png" />
 	<link rel="stylesheet" href="css/event.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">  
 </head>
@@ -18,9 +19,9 @@
 			<div class="right">
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li class="active"><a href="events.html">Events</a></li>
-					<li><a href="#">Blog</a></li>
+					<li class="active"><a href="dcon.html">D'con</a></li>
 					<li><a href="#">Contact</a></li>
+					<li><a href="joinus.html">Join us</a></li>
 				</ul>
 				<div class="hamburger"><span></span><span></span><span></span></div>
 			</div>
@@ -53,7 +54,10 @@
 			  	 	</ul></div>
 			  	 	<div class="tab-container">
 			  	 		 <div class="tabs">
-			  	 		 	  <p class="content">As a mentor you have to take complete responsibility towards the mentee assigned to you. You have to mentor and support them throughout their journey till they get a good career opportunity.</p>
+			  	 		 	 <div class="accordion open"><span class="tab1img"><img src="images/mentor1.svg" alt=""/></span>
+			  	 			<em>Want to become a Mentor?</em></div>
+			  	 		 	  <div class="accord">
+			  	 		 	  	 <p class="content">As a mentor you have to take complete responsibility towards the mentee assigned to you. You have to mentor and support them throughout their journey till they get a good career opportunity.</p>
 			  	 		 	  <div class="list-container">
 			  	 		 	  	   <h3>Qualification of Mentor</h3>
 			  	 		 	  	   <ul>
@@ -76,9 +80,14 @@
 			  	 		 	  	   </ul>
 			  	 		 	  </div>
 			  	 		 	 <div class="btn-container"> <a href="https://docs.google.com/forms/d/e/1FAIpQLScaIqTz156iWZca6Am-2uHpV5u6tYu0XNTzg0X64GTHgq0iZw/viewform" class="btn mentor">Register as a Mentor</a></div>
+			  	 		 	  </div>
 			  	 		 </div>
 			  	 		 <div class="tabs hide">
-			  	 		 	  <p class="content">If you are someone who is passionately looking for an opportunity to learn things from the experts.
+			  	 		 	 <div class="accordion">
+			  	 			<span class="tab1img"><img src="images/mentee1.svg" alt=""/></span>
+			  	 			<em>Want to become a Mentee?</em></div>
+			  	 		 	  <div class="accord">
+			  	 		 	  	 <p class="content">If you are someone who is passionately looking for an opportunity to learn things from the experts.
 You can register as a mentee.</p>
 			  	 		 	  <div class="list-container">
 			  	 		 	  	   <h3>Qualification of Mentor</h3>
@@ -99,9 +108,13 @@ You can register as a mentee.</p>
 			  	 		 	  	   </ul>
 			  	 		 	  </div>
 			  	 		 	 <div class="btn-container"> <a href="" class="btn mentor">Register as a Mentee</a></div>
+			  	 		 	  </div>
 			  	 		 </div>
-			  	 		 <div class="tabs hide">
-			  	 		 	  <p class="content">As a volunteer you can help us in our community works
+			  	 		 <div class="tabs hide"> 
+			  	 		 	<div class="accordion"><span class="tab1img"><img src="images/voluntee.svg" alt=""/></span>
+			  	 			<em>Want to become a Volunteer?</em></div>
+			  	 		 	  <div class="accord">
+			  	 		 	  	 <p class="content">As a volunteer you can help us in our community works
 (it includes, writing, designing, art any skills)
 You can help us identify the right mentee/mentor. And to connect them
 Social media, Design, PR, content writing, etc.,
@@ -117,6 +130,7 @@ Social media, Design, PR, content writing, etc.,
 			  	 		 	  </div>
 			  	 		 	  
 			  	 		 	 <div class="btn-container"> <a href="" class="btn mentor">Register as a Volunteer</a></div>
+			  	 		 	  </div>
 			  	 		 </div>
 			  	 	</div>	
 			  	 </div>
@@ -133,9 +147,9 @@ Social media, Design, PR, content writing, etc.,
 				<div class="footer_nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="events.html">Events</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">Contact</a></li>
+					<li><a href="events.html">D'con</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="joinus.html">Join us</a></li>
 					</ul>
 				</div>
 				<div class="social_app">
@@ -170,6 +184,37 @@ Social media, Design, PR, content writing, etc.,
   $(this).addClass('active');
   $('.tabs').addClass('hide');
   $('.tabs').eq(ind).removeClass('hide').fadeIn(200);
+});
+		var headerFix = function(){
+        	if($(window).scrollTop() > 100){
+        			$('header').addClass('active');
+        	}
+        	else{
+        			$('header').removeClass('active');
+        	}
+        }
+       $(document).on('click','.hamburger',function(){
+       	$(this).toggleClass('open');
+       	$('header .right ul').toggleClass('open');
+       	$('body').toggleClass('overhide');
+       });
+        $(window).scroll(function(){
+  
+        	headerFix();
+        });
+$(document).on('click','.accordion',function(){
+	if($(this).hasClass('open')){
+		$('.accord').slideUp(500);
+		$('.accordion').removeClass('open');
+	} 	
+	else{
+		$('.accordion').removeClass('open');
+		$('.accord').slideUp(500);
+		$(this).addClass('open');
+  		$(this).next().slideToggle(500);
+	}
+  
+
 });
 	});
 </script>
