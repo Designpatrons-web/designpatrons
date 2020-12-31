@@ -71,7 +71,7 @@
 						<li>You can get connect and network with like minded professionals across the industry that helps you keep yourself updated with current trends and technology.</li>
 						<li> It will add value to your professional credibility.</li>
 					</ul>
-					<a href="#" class="btn">
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSdQpvDEBXCwg4fiOCQOTZW6SDuYUmzuriCQATQ-W5XgfIOl7A/viewform" class="btn">
 				Become a Mentor
 				</a>
 				</div>
@@ -165,7 +165,7 @@ Social media, Design, PR, content writing, etc.,
 					<a href="index.html"><img src="images/footer_dp_logo.svg" alt=""></a>
 				</div>
 				<div class="footer_nav">
-					<p>Copyright © <span class="getYear">2021</span> Design Patrons</p>
+					<p>Copyright © <span class="getyear">2021</span> Design Patrons</p>
 				</div>
 				<div class="social_app">
 					<ul>
@@ -189,10 +189,9 @@ Social media, Design, PR, content writing, etc.,
 <script type="text/javascript" src="js/alertify.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/slick.min.js"></script>
-<script src="js/main.js"></script>
 <script>
 	 $(document).ready(function(){
-	 	getyear();
+	 	
         var visible;
         var sectionAnimation = function() {
             $('.to-animate').each(function(index, element) {
@@ -207,11 +206,16 @@ Social media, Design, PR, content writing, etc.,
                 }
             });
         };
+        sectionAnimation();
+        $(window).scroll(function(){
+        	sectionAnimation();
+        	headerFix();
+        });
         $(document).on('click','.contactUs',function(){
         		$('html,body').animate({scrollTop:$('.contact').offset().top},1000);
         });
 
-        sectionAnimation();
+        
 
         var headerFix = function(){
         	if($(window).scrollTop() > $('.what_do_we_do').offset().top - 200){
@@ -226,10 +230,8 @@ Social media, Design, PR, content writing, etc.,
        	$('header .right ul').toggleClass('open');
        	$('body').toggleClass('overhide');
        });
-        $(window).scroll(function(){
-        	sectionAnimation();
-        	headerFix();
-        });
+        
+       
     });
 
 	 function isInViewport(node) {
@@ -241,8 +243,8 @@ Social media, Design, PR, content writing, etc.,
             rect.left <= (window.innerWidth || document.documentElement.clientWidth)
         )
     }
-
-    function getyear(){
+ getyear();
+ function getyear(){
   var y = document.getElementsByClassName("getyear")
   var d = new Date();
   var t = d.getFullYear();
