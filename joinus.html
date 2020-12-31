@@ -18,10 +18,10 @@
 			</div>
 			<div class="right">
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li ><a href="index.html">Home</a></li>
 					<li class="active"><a href="dcon.html">D'con</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="joinus.html">Join us</a></li>
+					<!-- <li><a href="#">Event schedule</a></li> -->
+					<li><a href="#">Book now</a></li>
 				</ul>
 				<div class="hamburger"><span></span><span></span><span></span></div>
 			</div>
@@ -53,7 +53,7 @@
 			  	 		</li>
 			  	 	</ul></div>
 			  	 	<div class="tab-container">
-			  	 		 <div class="tabs">
+			  	 		 <div class="tabs" id="mentor">
 			  	 		 	 <div class="accordion open"><span class="tab1img"><img src="images/mentor1.svg" alt=""/></span>
 			  	 			<em>Want to become a Mentor?</em></div>
 			  	 		 	  <div class="accord">
@@ -82,7 +82,7 @@
 			  	 		 	 <div class="btn-container"> <a href="https://docs.google.com/forms/d/e/1FAIpQLScaIqTz156iWZca6Am-2uHpV5u6tYu0XNTzg0X64GTHgq0iZw/viewform" class="btn mentor">Register as a Mentor</a></div>
 			  	 		 	  </div>
 			  	 		 </div>
-			  	 		 <div class="tabs hide">
+			  	 		 <div class="tabs hide" id="mentee">
 			  	 		 	 <div class="accordion">
 			  	 			<span class="tab1img"><img src="images/mentee1.svg" alt=""/></span>
 			  	 			<em>Want to become a Mentee?</em></div>
@@ -110,7 +110,7 @@ You can register as a mentee.</p>
 			  	 		 	 <div class="btn-container"> <a href="" class="btn mentor">Register as a Mentee</a></div>
 			  	 		 	  </div>
 			  	 		 </div>
-			  	 		 <div class="tabs hide"> 
+			  	 		 <div class="tabs hide" id="volunteer"> 
 			  	 		 	<div class="accordion"><span class="tab1img"><img src="images/voluntee.svg" alt=""/></span>
 			  	 			<em>Want to become a Volunteer?</em></div>
 			  	 		 	  <div class="accord">
@@ -142,15 +142,10 @@ Social media, Design, PR, content writing, etc.,
 			<div class="wrapper">
 			<div class="innr_wrap">
 				<div>
-					<a href="#"><img src="images/footer_dp_logo.svg" alt=""></a>
+					<a href="index.html"><img src="images/footer_dp_logo.svg" alt=""></a>
 				</div>
 				<div class="footer_nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-					<li><a href="events.html">D'con</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="joinus.html">Join us</a></li>
-					</ul>
+					<p>Copyright © <span class="getYear">2021</span> Design Patrons</p>
 				</div>
 				<div class="social_app">
 					<ul>
@@ -161,7 +156,7 @@ Social media, Design, PR, content writing, etc.,
 					</ul>
 				</div>
 			</div>
-			 <p>Copyright © <span class="getYear">2020</span> Design Patrons</p>
+			 
 			</div>
 		</footer>	  
 	</div>	
@@ -174,6 +169,7 @@ Social media, Design, PR, content writing, etc.,
 <script src="js/slick.min.js"></script>
 <script>
 	$(document).ready(function(){
+		getyear();
 		$(document).on('click','.main-tab li',function(){
   var ind = $(this).index();
   var getLeft = $(this).position().left; 
@@ -202,6 +198,7 @@ Social media, Design, PR, content writing, etc.,
   
         	headerFix();
         });
+         
 $(document).on('click','.accordion',function(){
 	if($(this).hasClass('open')){
 		$('.accord').slideUp(500);
@@ -216,5 +213,28 @@ $(document).on('click','.accordion',function(){
   
 
 });
+var cur_url = window.location.href;
+   if (cur_url.indexOf('mentee') > -1) {
+   	   if($(window).width() > 768){
+   	   	 $('.main-tab li').eq(1).trigger('click');
+   	   }
+   	   else{
+   	   	$('#mentee .accordion').trigger('click');
+  	   }
+    } else if (cur_url.indexOf('volunteer') > -1) {
+        if($(window).width() > 768){
+   	   	 $('.main-tab li').eq(2).trigger('click');
+   	   }
+   	   else{
+   	   	$('#volunteer .accordion').trigger('click');
+  	   }
+    } 
 	});
+
+	    function getyear(){
+  var y = document.getElementsByClassName("getyear")
+  var d = new Date();
+  var t = d.getFullYear();
+  y[0].innerHTML = t;
+}
 </script>

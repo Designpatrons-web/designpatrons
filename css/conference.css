@@ -4,6 +4,9 @@
 .eventssect header .right ul li{
 	color:#fff;
 }
+.eventssect header .right ul li.active,.eventssect header.active .right ul li.active{
+	color: var(--active-color);
+}
 .eventssect header.active{
 	background-color: #fff;
 }
@@ -19,7 +22,10 @@
 .eventssect header.active .hamburger span,.eventssect header .hamburger.open span{
 	background-color: #333;
 }
-
+.vtc{
+	margin-left: -120px;
+	margin-bottom: 20px;
+}
 .banner-bg{
 	background: url(../images/conference-bg.jpg) no-repeat;
 	text-align: center;
@@ -97,7 +103,7 @@ top: 20%;
 .design_conf:after{
 	background:url(../images/patternsleft.svg) no-repeat;
 	left: 0;
-height: 700px;
+height: 730px;
 width: 200px;
 background-size: 100%;
 top: 10%;
@@ -120,7 +126,7 @@ bottom: 0;
 .decorateline{
 	display: block;
 color: #e94b43;
-font-size: 13px;
+font-size: 16px;
 }
 .cont-wrap h4{
 	font-size: 42px;
@@ -294,6 +300,9 @@ padding: 100px 0;
 .pricing .cont-wrap h4{
 font-size: 36px;
 font-weight: 600;
+width: 85%;
+margin: 0 auto 20px;
+line-height: 1.4;
 }
 @media all and (max-width: 768px){
 	.cols{
@@ -322,6 +331,11 @@ right: -10px;
 	}
 	.cont-wrap img{
 	width: 80%;
+	margin-left: -80px;
+	}
+	.design_conf::after{
+		height: 730px;
+		background-size: 30%;
 	}
 }
 @media all and (max-width: 620px){

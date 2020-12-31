@@ -42,7 +42,7 @@ h1,h2,h3{
 h2{
 	font-size: 30px;
 	color: var(--primary-color);
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 20px;
 }
 p{
@@ -194,6 +194,7 @@ header .right ul li a:hover{
 }
 header .right ul li.active{
 	color: var(--active-color);
+	font-weight: 500;
 }
 /*header*/
 
@@ -223,7 +224,7 @@ header .right ul li.active{
 .sub_ctn{
 	font-size: 14px;
 	color: #9B9B9C;
-	    width: 65%;
+	width: 70%;
 }
 /*.sub_ctn span{
 	color: 
@@ -243,25 +244,51 @@ header .right ul li.active{
 	margin-top: 20px;
 	transition: all 0.5s ease;
 }
-.btn:hover span{
+.btn:hover{
 	transition: background-color 0.5s ease;
 	background-color: #C60E05;
 }
+.btn.slackchannel:hover{
+transition: background-color 0.5s ease;
+	background-color: #3E0D48;
+	
+}
 .btn img{
 	    margin: 0px 10px;
+	    display: none;
 }
-.btn.txt-btn:hover span{
+.btn.txt-btn:hover{
 	transition: background-color 0.5s ease;
 	background-color: transparent;
 	color:#C60E05;
 }
-.btn span{
+.btn{
 	background-color: #E94B43;
 	padding: 8px 28px;
 	color: #fff;
 	font-weight: 500;
+	overflow: hidden;
 }
-
+.btn.slackchannel{
+	padding: 0;
+	background-color: #5B2666;
+	border-color: #5B2666;
+}
+.btn.slackchannel span{
+	padding: 8px 28px;
+	display: inline-block;
+}
+.btn.slackchannel:before{
+	content: '';
+	background-image: url(../images/dp-btn-logo.svg);
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
+	background-color: #fff;
+	display: inline-block;
+	padding: 8px 10px;
+background-position: center;
+}
 /*what we do section*/
 .what_do_we_do{
 	padding-bottom: 100px;
@@ -289,12 +316,13 @@ header .right ul li.active{
 	width: 40%;
 }
 .what_you_will_get .right{
-	width: 40%;
+	width: 50%;
 }
 .what_you_will_get .right ul li{
 	position: relative;
 	padding-left: 30px;
-	    margin-bottom: 10px;
+margin-bottom: 15px;
+font-size: 18px;
 }
 .what_you_will_get .right ul li:before{
 	content: "";
@@ -312,7 +340,6 @@ footer p{
 	text-align: center;
 color: #fff;
 font-size: 14px;
-margin-top: 70px;
 }
 
 
@@ -339,7 +366,7 @@ h3{
 	border: none;
 	font-size: 16px;
 }
-.txt-btn span{
+.txt-btn{
 	font-size: 16px;
 	background-color: unset;
 	color: var(--active-color);
@@ -399,38 +426,40 @@ h4{
 	/*width: 600px;*/
 }
 .testimonial p{
-	width: 80%;
 	padding-left: 20px;
+	font-size: 22px;
 }
 /*.testimonial .innr_wrap{
 	width: 300px;
 }*/
 .testimonial .wrapper{
    box-shadow: 2px 1px 18px 0px rgba(173, 166, 166, 0.21);
-   padding: 30px 50px 60px 90px;
+   padding: 30px 50px 60px 70px;
    width: 1150px;
    margin: 0 auto;
        display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
 }
 .testimonial .left{
-	width: 650px;
+	width: 65%;
 	position: relative;
 }
 .testimonial .left span{
 	position: absolute;
-	right: 130px;
+	right: 40px;
 	    margin-top: 10px;
+	    font-weight: 600;
 }
 .testimonial .right{
-	width: 40%;
+	width: 35%;
 }
 .testimonial .right img{
 	    position: absolute;
     top: auto;
-    right: 70px;
-    width: 24%;
+right: 100px;
+width: 25%;
     bottom: 0;
 	}
 .quote_small{
@@ -455,8 +484,19 @@ h4{
 	text-align: center;
 	    padding: 50px 0 80px;
 }
+.contact  h4:after{
+	content: '';
+	background-color: var(--active-color);
+	height: 4px;
+	width: 60px;
+	display: block;
+	margin:10px auto;
+}
+.contact p{
+	width: 70%;
+margin: 0 auto;
+}
 .contact .wrapper{
-    border: 1px solid #E7E7E7;
     padding: 50px 100px;
     border-radius: 30px;
 }
@@ -464,7 +504,10 @@ h4{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 30px;
+	margin-top: 20px;
+}
+.cnt_num{
+	margin-top: 40px;
 }
 .cnt_num img,.cnt_add img{
 	margin-right: 10px;
@@ -527,6 +570,9 @@ footer{
 	.banner_section h1{
 		width: 96%;
 	}
+	header .wrapper{
+		max-width: 100%;
+	}
 
 }
 @media all and (max-width: 1000px){
@@ -541,6 +587,9 @@ footer{
 	}
 }
 @media all and (max-width: 768px){
+	.contact p{
+		width: 90%;
+	}
 	.banner_section .left,.what_do_we_do .left,.what_you_will_get .left {
     width: 90%;
 	}

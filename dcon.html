@@ -21,7 +21,7 @@
 				<ul>
 					<li ><a href="index.html">Home</a></li>
 					<li class="active"><a href="dcon.html">D'con</a></li>
-					<li><a href="#">Event schedule</a></li>
+					<!-- <li><a href="#">Event schedule</a></li> -->
 					<li><a href="#">Book now</a></li>
 				</ul>
 				<div class="hamburger"><span></span><span></span><span></span></div>
@@ -46,7 +46,7 @@
 		<section class="design_conf">
 			 <div class="wrapper">
 			 	 <div class="cont-wrap">
-			 	 	    <img src="images/virutualconference.svg" alt=""> 
+			 	 	    <img src="images/virutualconference.svg" alt="" class="vtc"> 
 			 	 		<h4>It’s not just a virtual conference</h4>
 			 	 		<p>You'll get access to interact with the speakers. Participate in the live Q/A sessions/panel discussion, etc. You'll get a privilege to networking session during the conference. A one-on-one session where you could meet like-minded mortals and industry experts to connect. And we surprise you with our exclusive goodies at your physical address.</p>
 			 	 		<a href="#" class="btn"><span>Book Now</span></a>
@@ -61,17 +61,17 @@
 					    <div class="col_3">
 					    	  <span class="counter">1</span>
 					    	  <h3>Learn</h3>
-					    	  <p>Design is not just colors and shapes! We curated the event in such a way to provide you with a best in class learning experience from industry experts of different domains. From the basics of design thinking.</p>
+					    	  <p>We provide you best experience from industry experts in different domains. From defining design thinking to visioning approaching trends, you will get professional knowledge within a few hours. All our speakers are great inspirer in their domain. </p>
 					    </div>
 					    <div class="col_3">
 					    	  <span class="counter">2</span>
 					    	  <h3>Get inspired</h3>
-					    	  <p>Design is not just colors and shapes! We curated the event in such a way to provide you with a best in class learning experience from industry experts of different domains. From the basics of design thinking.</p>
+					    	  <p>When you sit at your desk the following week thinking about new ideas, what you've crossed in the Design conference will bombard in your memory. The real-life stories, case studies and design solutions of our speakers changed the world of a million people. Hear it, interact and inspire. </p>
 					    </div>
 					    <div class="col_3">
 					    	  <span class="counter">3</span>
 					    	  <h3>Get connected</h3>
-					    	  <p>Design is not just colors and shapes! We curated the event in such a way to provide you with a best in class learning experience from industry experts of different domains. From the basics of design thinking.</p>
+					    	  <p>There are various exclusive sessions to Interact with the guests, network with the like-minded desi designers and connect with your local folks. Join the neighbourhood, get yourself a pillar of support in ups and downs or be a pillar to strengthen your community.</p>
 					    </div>
 					</div>
 				  </div>
@@ -342,12 +342,7 @@
 					<a href="index.html"><img src="images/footer_dp_logo.svg" alt=""></a>
 				</div>
 				<div class="footer_nav">
-					<ul>
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="dcon.html">D'con</a></li>
-					<li><a href="#">Event schedule</a></li>
-					<li><a href="#">Book now</a></li>
-					</ul>
+					 <p>Copyright © <span class="getYear">2021</span> Design Patrons</p>
 				</div>
 				<div class="social_app">
 					<ul>
@@ -358,7 +353,7 @@
 					</ul>
 				</div>
 			</div>
-			 <p>Copyright © <span class="getYear">2020</span> Design Patrons</p>
+			
 			</div>
 		</footer>
 		  
@@ -374,6 +369,7 @@
 <script src="js/main.js"></script>
 <script>
 	 $(document).ready(function(){
+	 	
 
         var visible;
         var sectionAnimation = function() {
@@ -389,6 +385,7 @@
                 }
             });
         };
+
         sectionAnimation();
 
         var headerFix = function(){
@@ -440,7 +437,7 @@ else{
  }
 }, 1000);
  
-
+ getyear();
     });
 
 	 function isInViewport(node) {
@@ -452,4 +449,12 @@ else{
             rect.left <= (window.innerWidth || document.documentElement.clientWidth)
         )
     }
+
+function getyear(){
+
+  var y = document.getElementsByClassName("getyear")
+  var d = new Date();
+  var t = d.getFullYear();
+  y[0].innerHTML = t;
+}
 </script>
