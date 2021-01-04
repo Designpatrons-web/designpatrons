@@ -332,9 +332,10 @@ line-height: 1.4;
 height: 340px;
 	}
 	.whoattend::before{
-		width: 120px;
-height: 200px;
-right: -10px;
+width: 120px;
+height: 160px;
+right: -70px;
+background-size: 100%;
 	}
 	.conference-bg img{
 		width: 50%;
