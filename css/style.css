@@ -292,7 +292,7 @@ transition: background-color 0.5s ease;
 	border-color: #5B2666;
 }
 .btn.slackchannel span{
-	padding: 8px 28px;
+	padding: 0 28px;
 	display: inline-block;
 }
 .btn.slackchannel:before{
