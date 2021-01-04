@@ -1,7 +1,17 @@
 .eventssect header{
 	background-color: transparent;
 }
+.eventssect header .right ul {
+	align-items: center;
+}
 .eventssect header .right ul li{
+	color:#fff;
+}
+.eventssect header .right ul li .booknow{
+	margin:0;
+	padding: 8px 22px;
+}
+.eventssect header .right ul li .booknow:hover{
 	color:#fff;
 }
 .eventssect header .right ul li.active,.eventssect header.active .right ul li.active{

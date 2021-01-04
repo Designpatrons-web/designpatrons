@@ -149,6 +149,22 @@ img{
 .hamburger.open span:last-child {
     transform: rotate(-50deg);
 }
+/*.indicator:before{
+	content: '';
+position: absolute;
+right: 2px;
+top: 0;
+width: 10px;
+height: 10px;
+border: 2px solid var(--active-color);
+background: #fe3905;
+-webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+border-radius: 30px;
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+}*/
 /*header*/
 header{
 	position: fixed;
@@ -188,6 +204,7 @@ header .right ul li{
 }
 header .right ul li a{
 	transition: all 0.5s ease;
+	position: relative;
 }
 header .right ul li a:hover{
 	color:var(--active-color);
@@ -270,7 +287,7 @@ transition: background-color 0.5s ease;
 	overflow: hidden;
 }
 .btn.slackchannel{
-	padding: 0;
+	padding: 1px;
 	background-color: #5B2666;
 	border-color: #5B2666;
 }
@@ -288,6 +305,7 @@ transition: background-color 0.5s ease;
 	display: inline-block;
 	padding: 8px 10px;
 background-position: center;
+border-radius: 4px 0 0px 4px;
 }
 /*what we do section*/
 .what_do_we_do{

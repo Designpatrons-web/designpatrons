@@ -1,3 +1,14 @@
+ header .right ul {
+	align-items: center;
+}
+header .right ul li .booknow{
+	margin:0;
+	padding: 8px 22px;
+	line-height: inherit;
+}
+ header .right ul li .booknow:hover{
+	color:#fff;
+}
 h1{
 	font-weight: 600;
 	font-size: 42px;
