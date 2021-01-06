@@ -434,13 +434,13 @@ background-color: #fff;
    	background-color: #F4FCFF;
    	border:1px solid #E3F0F4;
    	border-top:0;
-   	padding: 20px;
+   	padding: 25px;
    	display: none;
+   	text-align: left;
    }
    .accorddetails h6{
    	font-weight: 700;
    	font-size: 25px;
-   	text-align: center;
    	margin: 30px 0 10px;
    }
    .popitalic{
@@ -449,7 +449,6 @@ background-color: #fff;
    }
    .accorddetails p{
    	font-size:16px;
-   	text-align: center;
    }
    .accordtitle:after {
     content: '';
