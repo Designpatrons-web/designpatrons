@@ -21,7 +21,7 @@
 				<ul>
 					<li ><a href="index.html">Home</a></li>
 					<li><a href="dcon.html">D'Con</a></li>
-					<li class="active"><a href="eventschedule.html">Event schedule</a></li>
+					<li class="active"><a href="eventschedule.html#evtschedule">Event schedule</a></li>
 					<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfT5UGDcuySnNuBdy5I2PdArrkigRbiNylHEcUScDacFrw5cA/viewform" target="_blank" class="btn booknow">Book now</a></li>
 				</ul>
 				<div class="hamburger"><span></span><span></span><span></span></div>
@@ -54,7 +54,7 @@
 			 	 </div>
 			 	</div> 
 			 	 
-			 	 <section class="eventschedule">
+			 	 <section class="eventschedule" >
 			<div class="wrapper">
 				 <div class="title">
 						<div class="daysht">Day 01 <span>23rd January</span></div>
@@ -486,6 +486,11 @@ $(document).on('click','.accordtitle',function(){
   
 
 });
+
+var cur_url = window.location.href;
+   if (cur_url.indexOf('evtschedule') > -1) {
+   	   $('body,html').animate({scrollTop:$('.design_conf').offset().top - 100},500);
+} 
 
         var headerFix = function(){
         	if($(window).scrollTop() > $('.design_conf').offset().top - 200){
