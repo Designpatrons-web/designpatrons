@@ -99,6 +99,7 @@ right: -260px;
 width: 400px;
 height: 400px;
 background-size: 100%;
+z-index: -1;
 }
 .reason_dcon:before{
 right: -260px;
@@ -117,6 +118,7 @@ height: 730px;
 width: 200px;
 background-size: 100%;
 top: 10%;
+z-index: -1;
 }
 .whoattend:before{
 	background:url(../images/circlepattern.svg) no-repeat;
