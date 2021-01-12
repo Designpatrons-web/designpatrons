@@ -253,11 +253,10 @@ top: -30px;
 	background-color: #22252B;
 }
 .speakers-list .col_4:last-child{
-background-color:#03091C;
-background-image:url(../images/innerpattern.svg);
-background-repeat: no-repeat;
-background-position: 110px 130px;
-background-size: 100%;
+
+}
+.volunteer{
+	margin-top: 100px;
 }
 .speakers:before{
 	content: '';
@@ -302,7 +301,7 @@ margin-top: 5px;
 }
 .pricing{
 	text-align: center;
-padding: 100px 0;
+padding: 40px 0 100px;
 }
 .pricing .wrapper{
 	padding: 60px 0;
@@ -467,7 +466,11 @@ background-color: #fff;
 box-shadow: 0px 4px 9px rgba(70, 70, 70, 0.14);
 
 }
-
+.opentitle{
+font-weight: 600;
+font-size: 22px;
+padding: 39px 0px;
+}
 .accordtitle.open::after{
 	transform: rotate(0deg);
 }
@@ -541,6 +544,10 @@ background-size: 100%;
 	}
 	.speakersleft,.speakersright {
     width: 90%;
+	}
+	.opentitle{
+		padding: 0;
+		font-size: 20px;
 	}
 	.speakersleft::before{
 		display: none;
@@ -619,10 +626,16 @@ transform: translateX(-50%);
 	.title{
 		font-size: 32px;
 	}
+	.pricing{
+		padding: 10px 0 90px;
+	}
 }
 @media all and (max-width: 480px){
 	.speakers-list .col_4 {
     flex-basis: 100%;
+	}
+	.pricing .cont-wrap h4 {
+    font-size: 28px;
 	}
 	.speakers p{
 		width: 85%;
